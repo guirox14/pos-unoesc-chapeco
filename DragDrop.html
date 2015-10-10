@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Darg and drop</title>
+  <title>Drag and drop</title>
 
   <style type="text/css">
   li {
@@ -45,7 +45,7 @@
   }
 
   #bin {
-    background: url(images/bin.jpg) top right no-repeat;
+    background: top right no-repeat;
     height: 250px;
     width: 166px;
     float: left;
@@ -53,11 +53,20 @@
     position: relative;
     margin-top: 0;
   }
-
-  #bin.over {
-    background: url(images/bin.jpg) top left no-repeat;
+  #bin.lixeira_vazia{
+  	background-image:  url(https://cdn1.iconfinder.com/data/icons/appicns/513/appicns_Trash_Empty.png);
+  	background-size: 100% auto;
   }
-
+  #bin.lixeira_cheia{
+  	background-image: url(https://cdn1.iconfinder.com/data/icons/appicns/513/appicns_Trash_Full.png);
+  	background-size: 100% auto;
+  }
+  #bin.over{
+  	border-color: green;
+  	background-image: url(https://cdn1.iconfinder.com/data/icons/appicns/513/appicns_Trash_Full.png);
+  	background-size: 100% auto;
+  }
+ 
   #bin p {
     font-weight: bold;
     text-align: center;
@@ -128,7 +137,7 @@ var addEvent = (function () {
   }
 
   var bin = document.querySelector('#bin');
-
+  bin.className = "lixeira_vazia";
   addEvent(bin, 'dragover', function (e) {
     if (e.preventDefault) e.preventDefault(); // allows us to drop
     this.className = 'over';
@@ -147,14 +156,15 @@ var addEvent = (function () {
   });
 
   addEvent(bin, 'drop', function (e) {
+
     if (e.stopPropagation) e.stopPropagation(); // stops the browser from redirecting...why???
 
     var el = document.getElementById(e.dataTransfer.getData('Text'));
     
     el.parentNode.removeChild(el);
-
+    
     // stupid nom text + fade effect
-    bin.className = '';
+      	bin.className = "lixeira_cheia";
     yum.innerHTML = eat[parseInt(Math.random() * eat.length)];
 
     var y = yum.cloneNode(true);
