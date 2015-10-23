@@ -322,7 +322,8 @@ seletor {
 
 
 ### Referencia:
-[http://www.maujor.com/tutorial/interativo-css3/inc/borderradius.php](http://www.maujor.com/tutorial/interativo-css3/inc/borderradius.php)
+[http://www.maujor.com/tutorial/](http://www.maujor.com/tutorial/)
+[http://www.w3schools.com/css/default.asp](http://www.w3schools.com/css/default.asp)
 
 <repetir para as demais funcionalidades>
 
