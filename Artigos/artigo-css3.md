@@ -3,31 +3,218 @@
 #### Pós-graduação em Desenvolvimento Web, Cloud e dispositivos móveis - WebMob
 #### Disciplina: HTML5+CSS3
 #### Professor: Jean Carlo Nascimento
-#### Acadêmico(a): Bla Bla Bla Bla
+#### Acadêmico(a): Guilherme Mendes Senger
 ### Artigo de revisão de CSS3
-##### Funcionalidade: border-radius
+##### Funcionalidade: transform
 ##### O que é?
-A propriedade CSS3 border-radius destina-se a definir bordas arredondadas. O arredondamento das bordas é feito com declaração de dois valores CSS de medida; o primeiro define o eixo horizontal (rx) de 1/4 de uma elipse e o segundo o eixo vertical (ry). O quarto de elipse assim definida é convenientemente inserida no canto vivo do box arredondando-o. O diagrama a seguir esclarece o esquema de arredondamento.
+As transformações em CSS3 permitem alterar a posição, girar, torcer/inclinar e aumentar ou diminuir os elementos, permitindo assim mudar sua forma, tamanho e posição, suportando 2D e 3D.
 ##### Onde usar:
-Em qualquer elemento que possui o atributo border.
+Em qualquer elemento do tipo transformable, cujo layout é controlado pelo CSS box model.
+##### Como usar:
+As transformações 2D são:
+```css
+/* translate: move o elemento no eixo X (à direita) e Y (abaixo) em pixels */
+seletor {
+  transform: translate(x,y);
+}
+/* rotate: gira o elemento em X graus em sentido horário (positivo) ou anti-horário (negativo) */
+seletor {
+  transform: rotate(angle);
+}
+/* scale: aumenta ou diminui o tamanho original do elemento no número de vezes informado para a largura e 
+altura */
+seletor {
+  transform: scale(x,y);
+}
+/* skewX: torce ou inclina o elemento no eixo X, conforme o ângulo informado */
+seletor {
+  transform: skewX(angle);
+}
+/* skewY: torce ou inclina o elemento no eixo Y, conforme o ângulo informado */
+seletor {
+  transform: skewY(angle);
+}
+/* skew: torce ou inclina o elemento no eixo X e Y, conforme os ângulos informados */
+seletor {
+  transform: skew(x-angle,y-angle);
+}
+/* matrix: combina todos os métodos anteriores em um só, passando 6 parâmetros representando uma matriz que 
+será utilizada para transformar o elemento */
+seletor {
+  transform: matrix(n,n,n,n,n,n);
+}
+```
+
+As transformações 3D são:
+
+```css
+/* rotateX: gira o elemento no eixo X, conforme o ângulo informado */
+seletor {
+  transform: rotateX(angle);
+}
+/* rotateY: gira o elemento no eixo Y, conforme o ângulo informado */
+seletor {
+  transform: rotateY(angle);
+}
+/* rotateZ: gira o elemento no eixo Z, conforme o ângulo informado */
+seletor {
+  transform: rotateZ(angle);
+}
+```
+
+##### Exemplo de uso
+O exemplo abaixo combina as duas funcionalidades vistas até agora, exibindo um elemento div vermelho de 100 x 100 px, adicionando um efeito de transição nas propriedades with e height com duração de 2 segundos e uma transformação com duração de 2 segundos.
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+```
+
+O efeito inicia ao passar o mouse sobre o elemento, conforme o exemplo abaixo, aumentando, girando e inclinando a imagem:
+```css
+div:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg) skewX(-5deg);
+}
+```
+
+
+
+
+
+
+##### Funcionalidade: resize
+##### O que é?
+Permite ao usuário redimensionar um elemento HTML.
+##### Onde usar:
+Qualquer elemento.
 ##### Como usar:
 ```css
-seletor {border-radius:
-[ <length> | <percentage> ]{1,4} [ / [ <length> | <percentage> ]{1,4} ]?);
+seletor {
+  resize: none|both|horizontal|vertical|initial|inherit;
 }
 ```
+
 ##### Exemplo de uso
-A sintaxe geral para aplicar borda arredondada é mostrada a seguir.
+Permite ao usuário aumentar ou reduzir a altura do elemento div.
 
 ```css
-seletor {
-  border-top-left-radius: rx ry;
-  border-top-right-radius: rx ry;
-  border-bottom-right-radius: rx ry;
-  border-bottom-left-radius: rx ry;
+div {
+  resize: vertical;
 }
-
 ```
+
+
+
+
+##### Funcionalidade: backgrounds
+##### O que é?
+Conjunto de propriedades para configurar o fundo de um elemento, sendo possível adicionar múltiplas imagens:
+background-image - imagem ou imagens a serem exibidas.
+background-position - posição da imagem no fundo.
+background-repeat - define se a imagem será repetida até preencher o espaço.
+background-size- tamanho da imagem a ser exibida.
+background-origin - define a origem da posição da imagem.
+background-clip - define a área de desenho da imagem.
+##### Onde usar:
+Em qualquer elemento que seja deseja exibir uma imagem de fundo.
+##### Como usar:
+```css
+seletor {
+  background-image: url|none|initial|inherit;
+  background-size: auto|length|cover|contain|initial|inherit;
+  background-origin: padding-box|border-box|content-box|initial|inherit;
+  background-clip: border-box|padding-box|content-box|initial|inherit;     
+}
+```
+
+##### Exemplo de uso
+A imagem cobrirá toda a janela do browser, centralizada e mantendo a proporção original, sem barras de rolagem.
+
+```css
+html {
+  background: url(img_flower.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+```
+
+
+
+
+##### Funcionalidade: border images
+##### O que é?
+Utilizar uma imagem como borda de um elemento, definindo como a imagem será cortada e se as seções do meio da borda deverão esticar a imagem ou repeti-la. A imagem sempre será cortada em nove pedaços: quatro cantos, quatro lados e um centro.
+##### Onde usar:
+Em qualquer elemento que suporte a propriedade border.
+##### Como usar:
+```css
+seletor {
+  border: border-width border-style border-color|initial|inherit;
+  border-image: source slice width outset repeat|initial|inherit;
+}
+```
+
+##### Exemplo de uso
+A imagem será cortada em pedaços de 30 pixels, que serão ajustados automaticamente para preencher toda a extensão da borda do elemento.
+
+```css
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(border.png) 30 round;
+}
+```
+
+
+##### Funcionalidade: Text Shadow
+##### O que é?
+A propriedade text-shadow destina-se a definir sombras em textos.
+##### Onde usar:
+Em qualquer elemento que possui o atributo text.
+##### Como usar:
+```css
+seletor { propriedade: offsetX offsetY raioBlur cor [,offsetX offsetY raioBlur cor];}
+```
+Os valores de raioBlur e cor são opcionais.
+
+##### Exemplo de uso
+A sintaxe geral para aplicar sombreamento em textos é mostrada a seguir.
+
+```css
+seletor { 
+      text-shadow: 0 0 0 0 none;
+}
+```
+
+
+
+##### Funcionalidade: Cores RGBA
+##### O que é?
+A propriedade RGBA destina-se a definir cores e transparência com uso de valores RGB (sistema de cores formado por Red, Green e Blue).
+##### Onde usar:
+Em qualquer elemento que possui propriedades de cor. Exemplos: color, background, border-color, etc.
+##### Como usar:
+```css
+seletor { propriedade: rgba(R, G, B, A); }
+```
+
+##### Exemplo de uso
+A sintaxe geral para aplicar cores e transparência RGB é mostrada a seguir.
+
+```css
+seletor { 
+      background: rgba(0, 0, 0, 1);
+}
+```
+
+
+
+
 ### Referencia:
 [http://www.maujor.com/tutorial/interativo-css3/inc/borderradius.php](http://www.maujor.com/tutorial/interativo-css3/inc/borderradius.php)
 
