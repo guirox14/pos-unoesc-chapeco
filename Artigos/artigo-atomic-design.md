@@ -49,7 +49,13 @@ Por fim, foi criada a página real, utilizando os átomos, moléculas, organismo
 Esta é a página que será entregue ao cliente para posterior avaliação/testes.</br>
 <img src="https://cloud.githubusercontent.com/assets/15130723/10555516/baafe8f6-7446-11e5-9731-10cb8bd39f16.png" alt="pages" title="Pages"/></br>
 #####6) Referências
-[http://tableless.com.br/o-que-e-design-atomic/](http://tableless.com.br/o-que-e-design-atomic/)</br>
-[http://pt.slideshare.net/bradfrostweb/atomic-design](http://pt.slideshare.net/bradfrostweb/atomic-design)
+[http://pt.slideshare.net/bradfrostweb/atomic-design](http://pt.slideshare.net/bradfrostweb/atomic-design)</br>
+[http://bradfrost.com/blog/post/atomic-web-design/](http://bradfrost.com/blog/post/atomic-web-design/)</br>
+[http://nomadev.com.br/atomic-design-por-que-usar/](http://nomadev.com.br/atomic-design-por-que-usar/)</br>
+[http://nomadev.com.br/atomic-design-com-angularjs/](http://nomadev.com.br/atomic-design-com-angularjs/)</br>
+[http://tableless.com.br/o-que-e-design-atomic/] (http://tableless.com.br/o-que-e-design-atomic/)</br>
+[http://patternlab.io/] (http://patternlab.io/)</br>
+[http://www.frontendbrasil.com.br/tutoriais/atomic-design-como-funciona/] (http://www.frontendbrasil.com.br/tutoriais/atomic-design-como-funciona/)</br>
+[http://arquiteturadeinformacao.com/mobile/atomic-design-redesenhando-os-entregaveis-de-designers-e-desenvolvedores/] (http://arquiteturadeinformacao.com/mobile/atomic-design-redesenhando-os-entregaveis-de-designers-e-desenvolvedores/)</br>
 
 ------ FIM do artigo ------
