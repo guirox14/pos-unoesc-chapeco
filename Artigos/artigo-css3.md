@@ -322,7 +322,7 @@ seletor {
 
 
 ### Referencia:
-[http://www.maujor.com/tutorial/](http://www.maujor.com/tutorial/)
+[http://www.maujor.com/tutorial/](http://www.maujor.com/tutorial/)</br>
 [http://www.w3schools.com/css/default.asp](http://www.w3schools.com/css/default.asp)
 
 <repetir para as demais funcionalidades>
