@@ -213,6 +213,112 @@ seletor {
 ```
 
 
+##### Funcionalidade: Cores HSLA
+##### O que é?
+A propriedade HSLA destina-se a definir cores e transparência com uso de valores para matiz (Hue), saturação (Saturation) e luminosidade (Lightness).
+##### Onde usar:
+Em qualquer elemento que possui o atributo background.
+##### Como usar:
+```css
+seletor { propriedade: hsla(H, S, L, A); } 
+```
+
+##### Exemplo de uso
+A sintaxe geral para aplicar cores e transparência é mostrada a seguir.
+
+```css
+seletor { 
+     background: hsla(0, 0%, 0%, 1); 
+}
+```
+
+
+##### Funcionalidade: Gradiente
+##### O que é?
+Gradientes permitem exibir transições suaves entre duas ou mais cores especificadas.
+##### Onde usar:
+Em qualquer elemento que contém o atributo background.
+##### Como usar:
+
+Existem dois tipos de gradientes: linear (são definidas pelo menos duas cores de parada) e radial (é definido pelo seu centro).
+
+```css
+seletor { propriedade: linear-gradient(direction, color-stop1, color-stop2, ...);}
+seletor { propriedade: radial-gradient(shape size at position, start-color, ..., last-color);}
+```
+
+##### Exemplo de uso
+A sintaxe geral para aplicar gradiente (linear e radial) pode variar conforme o navegador utilizado. Abaixo são exibidas sintaxes para alguns navegadores.
+
+```css
+seletor {
+  background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, blue); /* Standard syntax */
+}
+seletor {
+  background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(red, green, blue); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(red, green, blue); /* Standard syntax */
+}
+```
+
+
+##### Funcionalidade: Expressões Matemáticas
+##### O que é?
+A função calc() permite que se definam valores css com uso de expressões matemáticas, ou seja, o valor adotado para a propriedade é o resultado de uma expressão matemática.
+##### Onde usar:
+Em qualquer elemento que possui atributos numerados (podendo ser em pixels ou %).
+##### Como usar:
+
+Os operadores matemáticos válidos são: + (soma), - (subtração), * (multiplicação) e / (divisão). As unidades de medida css válidas na expressão matemática são as unidades css para: comprimento, ângulo, tempo, frequência e números inteiros e fracionários. Na expressão matemática que define o valor css é permitido que sejam misturadas diferentes unidades de medida. A sintaxe geral para uso desta função é conforme mostrada a seguir:
+
+```css
+seletor { propriedade: calc(expressão matemática); }
+```
+
+##### Exemplo de uso
+A sintaxe geral para aplicar expressões matemáticas nos atributos é mostrada a seguir.
+
+```css
+seletor {
+width: calc(100% - 100px); 
+}
+```
+
+
+
+##### Funcionalidade: Transform 2D – Rotate
+##### O que é?
+Essa transformação causa a rotação de um elemento. A rotação deve ser expressa em medida css para ângulos, ou seja, deg, grad, rad e turn.
+##### Onde usar:
+Em qualquer elemento que possui o atributo transform.
+##### Como usar:
+
+Valores positivos causam rotação no sentido horário e valores negativos no sentido anti-horário.
+
+```css
+seletor {transform: rotate(adeg); } 
+seletor {transform: rotateX(adeg); } 
+seletor {transform: rotateY(adeg); } 
+seletor {transform: rotateZ(adeg); }
+```
+
+##### Exemplo de uso
+A sintaxe geral para aplicar rotação é mostrada a seguir.
+
+```css
+seletor {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+```
+
 
 
 ### Referencia:
