@@ -13,9 +13,9 @@ O Atomic Design ou Design Atômico, em português, é uma criação do webdesign
 #####2) Como funciona
 Consiste em dividir o sistema em cinco partes, conforme descritas abaixo:</br></br>
 **2.1 Átomos**: são as partes mínimas de cada página, mas que sozinhas não são úteis. Exemplos: inputs, buttons, labels de formulários, etc.</br></br>
-**2.2 Moléculas**:Juntando um ou mais átomos, cria-se uma molécula, que faz com que os átomos funcionem com um objetivo único, criando um componente mais concreto. Por exemplo, um label, uma caixa de texto e um botão podem formar um componente de pesquisa.
+**2.2 Moléculas**:Juntando um ou mais átomos, cria-se uma molécula, que faz com que os átomos funcionem com um objetivo único, criando um componente mais concreto. Por exemplo, um label, uma caixa de texto e um botão podem formar um componente de pesquisa.</br></br>
 **2.3 Organismos**: São grupos de moléculas, que formam partes maiores (ou sessões) de uma página. Norteiam a navegação de leitura do conteúdo da interface. A criação de organismos torna possível o reuso de componentes, pois um organismo pode ter moléculas de vários tipos diferentes.</br></br>
-**2.4 Templates**: Nesta etapa diversos organismos são acoplados para se criar um modelo vivo, ou seja, o esqueleto de uma página HTML funcional, mas de baixa fidelidade (wireframes). Neste momento, já é possível validar o layout com o cliente, pois foi produzido algo concreto, do ponto de vista dele.
+**2.4 Templates**: Nesta etapa diversos organismos são acoplados para se criar um modelo vivo, ou seja, o esqueleto de uma página HTML funcional, mas de baixa fidelidade (wireframes). Neste momento, já é possível validar o layout com o cliente, pois foi produzido algo concreto, do ponto de vista dele.</br></br>
 **2.5 Páginas**:Adicionando-se conteúdo a um template, tem-se uma página, com cores, tipografia, imagens e vídeos, facilitando a validação do template e identificação de ajustes necessários, culminando no produto final.
 
 
